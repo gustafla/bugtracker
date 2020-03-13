@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<form method="POST" action="{{ url_for('reports_create') }}">
+  <input type="text" name="title"/>
+  <input type="text" name="summary"/>
+  <input type="range" name="priority" min="0" max="10" value="5"/>
+  <input type="submit" value="Submit report"/>
+</form>
+{% endblock %}
