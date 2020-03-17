@@ -1,5 +1,7 @@
 # Database application: Bug reports and feature requests
 
+[View a live demo](https://tsoha-2020-bugtracker.herokuapp.com/)
+
 Even though there exists a myriad of bug trackers and feature request systems,
 including the current home of this project itself (Github), I've decided to
 implement one as an excercise.
