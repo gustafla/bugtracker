@@ -16,10 +16,10 @@ def reports_form():
 
 @app.route("/reports/", methods=["POST"])
 def reports_create():
-    t = Report(request.form.get("title"), request.form.get("description"),
-               request.form.get("priority"))
+    form = request.form
+    r = Report(form.get("title"), form.get("description"), form.get("priority"))
 
-    db.session().add(t)
+    db.session().add(r)
     db.session().commit()
 
     return redirect(url_for("reports_index"))

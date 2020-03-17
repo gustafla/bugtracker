@@ -2,6 +2,7 @@ from flask import Flask
 from .extensions import db
 
 import application.reports.models # noqa
+import application.users.models # noqa
 
 app = Flask(__name__.split('.')[0])
 
@@ -16,3 +17,4 @@ with app.app_context():
 
 import application.views # noqa
 import application.reports.views # noqa
+import application.users.views # noqa
