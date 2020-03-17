@@ -6,6 +6,11 @@
   </head>
 
   <body>
+    <ul>
+      <li><a href="{{ url_for('reports_index') }}">List reports</a></li>
+      <li><a href="{{ url_for('reports_form') }}">Create a new report</a></li>
+    </ul>
+
     {% block body %}
       <p>Content</p>
     {% endblock %}

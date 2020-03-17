@@ -1,4 +1,4 @@
-from flask import render_template, request
+from flask import render_template, request, redirect, url_for
 from application import app
 from application.extensions import db
 from application.reports.models import Report
@@ -22,4 +22,4 @@ def reports_create():
     db.session().add(t)
     db.session().commit()
 
-    return "hello world!"
+    return redirect(url_for("reports_index"))
