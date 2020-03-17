@@ -16,7 +16,7 @@ def reports_form():
 
 @app.route("/reports/", methods=["POST"])
 def reports_create():
-    t = Report(request.form.get("title"), request.form.get("summary"),
+    t = Report(request.form.get("title"), request.form.get("description"),
                request.form.get("priority"))
 
     db.session().add(t)
