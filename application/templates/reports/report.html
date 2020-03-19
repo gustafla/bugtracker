@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<form method="POST" action="{{ url_for('reports_update', report_id=report.id) }}">
+  <input type="text" name="title" value="{{ report.title }}"/>
+  <input type="text" name="description" value="{{ report.description }}"/>
+  <input type="range" name="priority" min="0" max="10" value="{{ report.priority }}"/>
+  <input type="range" name="progress" min="0" max="10" value="{{ report.progress }}"/>
+  <input type="submit" value="Update report"/>
+</form>
+{% endblock %}

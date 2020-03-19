@@ -10,7 +10,7 @@
     </tr>
     {% for report  in reports %}
     <tr>
-      <td>{{ report.title }}</td>
+      <td><a href={{ url_for('reports_get', report_id=report.id) }}>{{ report.title }}</a></td>
       <td>{{ report.date }}</td>
       <td>{{ report.priority }}</td>
       <td>{{ report.progress }}</td>
